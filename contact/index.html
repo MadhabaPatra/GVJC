@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact-Gyana Vikash Junior College</title>
+	<link rel="shortcut icon" href="img/logo.jpg" />	
+	<meta name="viewport" content="width=device-width">
+<!--
+	 _____________Font Awesome CDN stackpath&cloudfare_______________
+	-->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!--
+	 _____________Jquery cdn version 3.4.1_______________
+	-->
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+	integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	crossorigin="anonymous"></script>
+<!--
+	 _____________BOOTSTRAP  CSS CDN version 3.4_______________
+	-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!--
+	 _____________Ajax Jquery by bootstrap_______________
+	-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!--
+	 ____________BOOTSTRAP  Javascript CDN version 3.4_______________
+	-->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   
+   <link rel="stylesheet" type="text/css" href="style.css" />
+<!--
+	 ____________Menu-Toggle Mobile Version_______________
+	-->
+<script type="text/javascript">
+		$(document).ready(function(){
+	$('.menu-toggle').click(function(){
+	$('.menu-toggle').toggleClass('active');
+	$('nav').toggleClass('active');
+	})
+		})
+	</script>
+ 	<!--
+	 _____________Page Reload Resubmission Issue Solve_______________
+	-->
+  <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+
+</head>
+<body>
+	<header>
+
+		<a href="home.php" class="logo" title="Gyana Vikash Junior College">  <img src="img/logo.jpg" class="logo-img" alt=""></img>  Gyana Vikash Junior College  </a>
+		<div class="menu-toggle"></div>
+		<nav>
+	<ul>
+		<li> <a href="home.php">Home</a> </li>
+		<li> <a href="about.php">About</a> </li>
+		<li> <a href="test.php">Activity</a> </li>
+		<li> <a href="admission.php">Admission</a> </li>
+			<li> <a href="job.php">Job</a> </li>
+		<li> <a href="#" class="active">Contact</a> </li>
+		<li> <a href="login.php">Login</a> </li>
+	</ul>
+		</nav>
+		<div class="clearfix"></div>
+	</header>
+ 
+<div class="contact">
+	
+
+<h1>Contact Us</h1> 
+
+
+</div>
+<!-- thank you message or alert message -->
+	<div class="text-center"><strong><h2 class="text-danger blinking">
+		    <?php
+		    echo $msg;
+		    ?></h2></strong>
+		    </div>
+		    <div class="text-center"> <strong><span class="text-success blinking">
+		        <?php
+		        echo $successmsg;
+		        ?>
+		         </span>
+		        <span class="highlight">
+		             <?php
+		            echo $genId;
+		             ?>
+		        </span>
+		      </strong> 
+		          </div>
+		    
+<!-- Contact START -->
+	<div class="container" id="c-form">		
+		<div class="row">
+			<a href="https://goo.gl/maps/Zu2hkP7L72zMz9xz7">
+			<div class="col-md-6 col-sx-6 col-xs-12">
+				<div class="contact-box clearfix">
+					<div class="contact-icon">
+						<i class="fa fa-map-marker"></i>
+					</div>
+					<div class="contact-info">
+						<h4>Our Address</h4>
+						<p>Gyana Vikash Junior College
+
+Raghunathpur <br>Pin No-761003 <br> Berhampur,Odisha</p>
+					</div>
+				</div>				
+			</div>
+            </a>
+            <a href="tel:9556774243">
+			<div class="col-md-6 col-sx-6 col-xs-12">
+				<div class="contact-box clearfix">
+					<div class="contact-icon">
+						<i class="fa fa-phone"></i>
+					</div>
+					<div class="contact-info">
+						<h4>Phone & Email</h4>
+						<p>+91 9556774243<br> 8260602211, 8895827878 <br> Gyanavikash@yahoo.com</p>
+
+					</div>
+				</div>				
+			</div>
+           </a>
+		</div>
+	</div>
+<!-- Contact START -->
+
+    
+
+
+
+
+<div class="contact-us" >
+	<div class="container">
+		<div class="section-heading center-holder">
+			<h2 class="text-center">Feel Free To Contact Us</h2>
+			<div class="heading-line"></div>
+	
+			<div class="alert alert-danger text-center">
+				 All Fields Are Required!!!
+			</div>
+			
+	
+		</div>			
+		<div>
+			<form action=""  method="post" class="contact-form">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<input type="text" name="name" placeholder="Your Full-Name">
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<input type="number" maxlength="10" name="phone" placeholder="Phone Number" oninput="javascript: if (this.value.length > this.maxLength)this.value=this.value.slice(0,this.maxLength);" >
+					</div>
+                       <div class="col-xs-12">
+				<input type="text" name="subject" placeholder="Subject">
+					</div>
+					<div class="col-xs-12">
+						<textarea name="message" placeholder="Your Message"></textarea>
+					</div>
+
+					
+						<button type="submit" name="send" class="submit-button btn btn-outline-success" >Send Message</button>
+					
+				</div>							
+			</form>	
+		</div>
+	</div>		
+</div>
+<!-- Contact END -->
+
+
+
+
+<div  class="alert alert-danger text-center" role="alert">
+ Developed By Madhaba Patra &nbsp;&nbsp;&nbsp;<a href="tel:7978019296">Coffee With Developer</a>
+</div>
+
+
+	<div class="footer"></div>
+</body>
+</html>
