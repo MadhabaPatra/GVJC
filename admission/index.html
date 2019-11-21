@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admission -Gyana Vikash Junior College</title>
+		<meta name="viewport" content="width=device-width">
+<!--
+	 _____________Font Awesome CDN stackpath&cloudfare_______________
+	-->
+	 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+	 <!--
+	 _____________Google fonts css_______________
+	-->
+	 <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<!--
+	 _____________Jquery cdn version 3.4.1_______________
+	-->
+	 <script src="https://code.jquery.com/jquery-3.4.1.js"
+	 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	 crossorigin="anonymous"></script>
+<!--
+	 _____________BOOTSTRAP  CSS CDN version 3.4_______________
+	-->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!--
+	 _____________Ajax Jquery by bootstrap_______________
+	-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!--
+	 ____________BOOTSTRAP  Javascript CDN version 3.4_______________
+	-->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="style.css" />
+   	<!--
+	 _____________Page Reload Resubmission Issue Solve_______________
+	-->
+  <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+<!--
+	 ____________Menu-Toggle Mobile Version_______________
+	-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+	$('.menu-toggle').click(function(){
+	$('.menu-toggle').toggleClass('active');
+	$('nav').toggleClass('active');
+	})
+		})
+	</script>
+
+<!--
+	 ____________Menu-Toggle Mobile Version_______________
+	-->
+
+
+</head>
+	
+<!--
+	 ________________________________Body Part_______________________________________________
+	-->
+<body>
+	<header>
+		<a href="home.php" class="logo" title="Gyana Vikash Junior College">  <img src="img/logo.jpg" class="logo-img" alt=""></img>  Gyana Vikash Junior College  </a>
+		<div class="menu-toggle"></div>
+		<nav>
+	<ul>
+		<li> <a href="home.php">Home</a> </li>
+		<li> <a href="about.php">About</a> </li>
+		<li> <a href="test.php">Activity</a> </li>
+		<li> <a href="#" class="active">Admission</a> </li>
+			<li> <a href="job.php" >Job</a> </li>
+		<li> <a href="contact.php">Contact</a> </li>
+		<li> <a href="login.php">Login</a> </li>
+	</ul>
+		</nav>
+		<div class="clearfix"></div>
+	</header>
+
+
+
+
+<div class="job">
+	
+	
+<div class="container">
+		<div class="section-heading center-holder">
+			
+			<div class="alert alert-danger text-center">
+			<strong>	 Fill Form Very Carefully!!! ADMISSION</strong>
+			<span>2019</span>
+			</div>
+	<div class="alert alert-warning notice">
+			<strong><marquee>Quick Admission Open 2019!!!!!this is a online Submission-cum-Admission form.fill form carefully.otherwise your application will be rejected.</marquee> </strong>
+			</div>
+		</div>	
+	 <!-- thank you message or alert message -->
+	<div class="text-center"><strong><span class="text-danger blinking">
+		    <?php
+		    echo $msg;
+		    ?></span></strong>
+		    </div>
+		    <div class="text-center"> <strong><span class="text-success blinking">
+		        <?php
+		        echo $successmsg;
+		        ?>
+		         </span>
+		        <span class="highlight">
+		             <?php
+		            echo $genId;
+		             ?>
+		        </span>
+		      </strong> 
+		          </div>
+		      
+		<div>
+		<form  method="post" class="contact-form" enctype="multipart/form-data">
+				<div class="alert alert-success">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<input type="text" name="name" placeholder="Student's Full-Name">
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12">
+					<input type="number" maxlength="10" name="phone1" placeholder="Phone Number" oninput="javascript: if (this.value.length > this.maxLength)this.value=this.value.slice(0,this.maxLength);" >
+					</div>
+                       
+					 <div class="col-md-6 col-sm-6 col-xs-12">
+						<input type="text" name="gname" placeholder="Guidence's Name">
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<input type="number" maxlength="10" name="phone2" placeholder="Phone Number" oninput="javascript: if (this.value.length > this.maxLength)this.value=this.value.slice(0,this.maxLength);" >
+					</div>
+                       
+					 <div class="col-xs-12">
+				<input type="text" name="roll" placeholder="Student's 10th Roll-number">
+					</div>
+					 <div class="col-xs-12">
+				<input type="number" maxlength="3" max="600" name="mark" placeholder="Student's 10th Mark" oninput="javascript: if (this.value.length > this.maxLength )this.value=this.value.slice(0,this.maxLength);" onkeyup="markCalc(this)">
+					</div>
+					<div class="col-xs-12">
+				<input type="text" name="pmark" maxlength="6" placeholder="Student's 10th Mark (in %age)" id="m" >
+					</div>
+					<div class="col-xs-12">
+					     <img src="img/upload-png.png" />
+<label for="exampleFormControlFile1">Upload Your 10th Marksheet</label>
+      <input type="file" class="form-control-file" name="file" id="exampleFormControlFile1" >
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<input type="text" name="city" placeholder="Vilage/city">
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<input type="Number" maxlength="6" name="pin" placeholder="Pin-Code" oninput="javascript: if (this.value.length > this.maxLength)this.value=this.value.slice(0,this.maxLength);">
+					</div>
+					</div>	
+				</div>
+					
+		         <center>
+					 <div class="col-xs-12">
+					<button type="submit" name="send" class="submit-button btn btn-outline-success" onclick="show()">APPLY NOW</button>
+					</div></center>
+					</div>	
+				
+			</form>	
+	
+	</div>		
+</div>
+
+
+
+<div  class="alert alert-danger text-center" role="alert">
+ Developed By Madhaba Patra &nbsp;&nbsp;&nbsp;<a href="tel:7978019296">Coffee With Developer</a>
+</div>
+
+	
+	<div class="footer"></div>
+	
+<script>
+function markCalc(i) {
+  a=i.value;
+  p=a*100/600;
+  p=p.toFixed(2);
+  var x = document.getElementById("m");
+  r=p+"%";
+  x.value= r;
+}
+</script>
+</body>
+</html>

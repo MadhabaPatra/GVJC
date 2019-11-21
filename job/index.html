@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Job-Gyana Vikash Junior College</title>
+	<meta name="viewport" content="width=device-width">
+<!--
+	 _____________Font Awesome CDN stackpath&cloudfare_______________
+	-->
+	 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+	 <!--
+	 _____________Google fonts css_______________
+	-->
+	 <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<!--
+	 _____________Jquery cdn version 3.4.1_______________
+	-->
+	 <script src="https://code.jquery.com/jquery-3.4.1.js"
+	 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	 crossorigin="anonymous"></script>
+<!--
+	 _____________BOOTSTRAP  CSS CDN version 3.4_______________
+	-->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!--
+	 _____________Ajax Jquery by bootstrap_______________
+	-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!--
+	 ____________BOOTSTRAP  Javascript CDN version 3.4_______________
+	-->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="style.css" />
+<!--
+	 ____________Menu-Toggle Mobile Version_______________
+	-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+	$('.menu-toggle').click(function(){
+	$('.menu-toggle').toggleClass('active');
+	$('nav').toggleClass('active');
+	})
+		})
+	</script>
+
+  	<!--
+	 _____________Page Reload Resubmission Issue Solve_______________
+	-->
+  <script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+<!--
+	 ____________Menu-Toggle Mobile Version_______________
+	-->
+
+
+	<script type="text/javascript">
+$(document).ready(function(){
+    $("select.country").change(function(){
+        var selectedCountry = $(".country option:selected").val();
+        $.ajax({
+            type: "POST",
+            url: "job-panel1.php",
+            data: { country : selectedCountry } 
+        }).done(function(data){
+            $("#response").html(data);
+        });
+    });
+});
+</script>
+</head>
+	
+<!--
+	 ________________________________Body Part_______________________________________________
+	-->
+<body>
+	<header>
+
+		<a href="home.php" class="logo" title="Gyana Vikash Junior College">  <img src="img/logo.jpg" class="logo-img" alt=""></img>  Gyana Vikash Junior College  </a>
+		<div class="menu-toggle"></div>
+		<nav>
+	<ul>
+		<li> <a href="home.php">Home</a> </li>
+		<li> <a href="about.php">About</a> </li>
+		<li> <a href="test.php">Activity</a> </li>
+		<li> <a href="admission.php">Admission</a> </li>
+			<li> <a href="#" class="active">Job</a> </li>
+		<li> <a href="contact.php">Contact</a> </li>
+		<li> <a href="login.php">Login</a> </li>
+	</ul>
+		</nav>
+		<div class="clearfix"></div>
+	</header>
+ 
+
+
+
+<div class="job">
+	
+	
+<div class="container">
+		<div class="section-heading center-holder">
+			
+			<div class="alert alert-danger text-center">
+			<strong>	 Fill Form Very Carefully!!!</strong>
+			<span>2019</span>
+			</div>
+	<div class="alert alert-warning notice">
+			<strong><marquee>here is notice for those who are applying job as teaching or manangement staff,please kindly upload your resume otherwise your application may be rejected.....</marquee> </strong>
+			</div>
+		</div>	
+	  <!-- thank you message or alert message -->
+	<div class="text-center"><strong><span class="text-danger blinking">
+		    <?php
+		    echo $msg;
+		    ?></span></strong>
+		    </div>
+		    <div class="text-center"> <strong><span class="text-success blinking">
+		        <?php
+		        echo $successmsg;
+		        ?>
+		         </span>
+		        <span class="highlight">
+		             <?php
+		            echo $genId;
+		             ?>
+		        </span>
+		      </strong> 
+		          </div>
+		      
+		<div>
+			<form  method="post" class="contact-form" enctype="multipart/form-data">
+				<div class="alert alert-success">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<input type="text" name="name" placeholder="Your Full-Name">
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<input type="number" maxlength="10" name="phone" placeholder="Phone Number" oninput="javascript: if (this.value.length > this.maxLength)this.value=this.value.slice(0,this.maxLength);" >
+					</div>
+                       <div class="col-xs-12">
+				<input type="text" name="email" placeholder="Your Email">
+					</div>
+					 <div class="col-xs-12">
+				<label>Employee Type:</label>
+                <select name="emp_type" class="country">
+                    <option value="" hidden="hidden">Select</option>
+                    <option value="teaching">Teaching</option>
+                    <option value="nonteaching">Non Teaching</option>
+                    <option value="management">Management</option>
+                </select>
+               </div>
+					 <div class="col-xs-12">
+					 	<label>Employee Position:</label>
+                <select name="emp" id="response">
+                	<option hidden="hidden">Select</option>
+                </select>
+					</div>
+					 <div class="col-xs-12">
+				<input type="number" maxlength="2" name="age" placeholder="Your Age" oninput="javascript: if (this.value.length > this.maxLength)this.value=this.value.slice(0,this.maxLength);">
+					</div>
+					</div>	
+				</div>
+					<div class="section-heading center-holder">
+			
+			<div class="alert alert-danger text-center">
+			<strong>	Qualification Details !!!</strong>
+			</div>
+	
+		</div>	
+		<div class="alert alert-success">
+		<div class="row">
+					 <div class="col-xs-12">
+					     <img src="img/upload-png.png" />
+<label for="exampleFormControlFile1">Upload Your Resume/Experiance/Certificate Of Tranining</label><span><sup>*</sup>(For Teaching And Management Only)</span>
+
+    <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">
+					</div>
+                       <div class="col-xs-12">
+				<input type="text" name="sal" placeholder="Salary Expected">
+					</div>
+					</div>	
+					<center>
+					 <div class="col-xs-12">
+					<button type="submit" name="send" class="submit-button btn btn-outline-success" onclick="show()">SUBMIT</button>
+					</div></center>
+				</div>
+															
+			</form>	
+		</div>
+	</div>		
+</div>
+</div>
+
+<div  class="alert alert-danger text-center" role="alert">
+ Developed By Madhaba Patra &nbsp;&nbsp;&nbsp;<a href="tel:7978019296">Coffee With Developer</a>
+</div>
+	
+</body>
+</html>
