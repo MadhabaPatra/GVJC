@@ -1,0 +1,615 @@
+/*
+----------------------------------------------------------------
+slno          Content                Description
+--------- ------------------- ------------------------------------
+ 1.         Header Part        font awesome,code jquery,javascript-A
+ 1.         Header Part        font awesome,code jquery,javascript-A
+ 1.         Header Part        font awesome,code jquery,javascript-A
+ 1.         Header Part        font awesome,code jquery,javascript-A
+*/
+body{
+	margin: 0px;
+	padding: 0px;
+}
+/*
+----------------------------------------------------------------
+1.               Header Part CSS code
+----------------------------------------------------------------
+*/
+
+header{
+	position: fixed;
+  width: 90%;
+	background: #fff;
+	box-sizing: border-box;
+	border-radius: 4px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+ top: 0px ;
+left: 5%;
+z-index: 99999;
+}
+.logo{
+color: #069370;
+height: 50px;
+font-size: 40px;
+text-align: center;
+float: left;
+font-weight: 700;
+text-decoration: none;
+padding-left: 20px;
+line-height: 60px;
+}
+.logo:hover{
+	text-decoration:none;
+}
+.logo-img{
+	padding-top: 5px;
+	height: 55px;
+	width: 65px;
+}
+nav{
+	float: right;
+}
+.clearfix{
+	clear: both;
+}
+nav ul{
+	margin: 10px;
+	padding: 0px;
+	display: flex;
+}
+nav ul li{
+	list-style: none;
+}
+nav ul li a{
+	display: block;
+	margin: 10px 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #262626;
+}
+nav ul li a.active,nav ul li a:hover{
+	background: #069370;
+	transition: 0.5s;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+@media (max-width:768px) {
+	header{
+		width:100%;
+        left:0px;
+	}
+	.logo{
+		font-size: 20px;
+	}
+	.logo-img{
+		height: 45px;
+		width: 50px;
+	}
+.menu-toggle{
+	display: block;
+	float: right;
+	width: 40px;
+	height: 40px;
+    margin:10px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 30px;
+	color: #069370;
+	}
+	.menu-toggle:before{
+		content: '\f0c9';
+		font-family: fontAwesome;
+		line-height: 40px;
+	}
+	.menu-toggle.active:before{
+		content: '\f00d';
+	}
+	nav{
+		display: none;
+	}
+	nav.active{
+		display: block;
+		width: 100%;
+	}
+	nav.active ul{
+		display: block;
+	}
+}
+/*
+----------------------------------------------------------------
+2.              Slider Image  Part CSS code
+----------------------------------------------------------------
+*/
+.slider-section
+{
+	width: 100%;
+	padding: 0;
+	}
+.item{
+	width: 100%;
+	height: 600px;
+}
+@media (max-width:768px) {
+	.slider-section{
+		margin-top: 50px;
+	width: 100%;
+	height: 100%;
+	}
+	.item{
+		width: 100%;
+		height: 200px;
+	}
+   
+}
+
+
+.reason-section{
+	background-color: rgba(0,255,0,0.1);
+}
+ .reason-section h2{
+font-family: 'Sofia';
+text-align: center;
+}
+.service-box{
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	padding: 20px;
+	border-radius: 5px;
+	margin: 15px 0px 15px 0px;
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s;
+}
+
+.box-icon{
+	float: left;
+	width: 25%;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.box-icon i{
+	font-size: 38px;
+	color: #45deb0;
+	transition: all .2s ease-in-out;
+}
+
+.box-content{
+	float: right;
+	width: 75%;
+}
+
+.box-content h5{
+	font-size: 17px;
+	font-weight: 400;
+	color: #525252;
+	line-height: 180%;
+	margin-left: 15px;
+	margin-bottom: 5px;
+}
+
+.box-content p{
+	font-size: 15px;
+	font-weight: 400;
+	color: #aaa;
+	line-height: 180%;
+	margin-left: 15px;
+	margin-bottom: 0px;
+}
+
+.service-box:hover{
+	box-shadow: 0 0 50px 10px rgba(0,0,0,.06);
+}
+@media (max-width:768px) {
+    .box-icon i{
+	font-size: 35px;
+	
+}
+    
+    
+}
+
+
+
+/*
+----------------------------------------------------------------
+3.              Contact  Part CSS code
+----------------------------------------------------------------
+*/
+
+.contact{
+	width: 100%;
+	height: 500px;
+	background-attachment: fixed;
+	background-image: url('img/contact.jpg');
+	background-size: 100% 100%;
+}
+.contact h1{
+	top: 40%;
+	left: 50%;
+	position: absolute;
+	color:#069370;
+	font-size: 50px;
+	font-weight: 400;
+	transform: translate(-50%,-50%);
+}
+
+@media (max-width: 768px)
+{
+	.contact h1{
+	font-size: 40px;
+	font-weight: 300;
+    top:20%;
+}
+.contact{
+	height: 400px;
+}
+
+}
+@media (max-height: 468px)
+{
+
+.contact h1{
+     top:50%;
+}
+}
+
+.contact-box{
+	border-bottom: 2px solid #45deb0;
+	border: 1px solid #f1f1f1; 
+	padding: 30px 20px 40px 20px;
+	margin: 10px 0px 10px 0px;
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s;
+}
+.contact-box:hover{
+	background: #f9f9f9;
+	border-bottom: 2px solid #45deb0;  
+}
+
+.contact-icon{
+	float: left;
+	text-align: center;
+	padding: 0px 15px 10px 0px;
+	width: 25%;
+}
+
+.contact-icon i{
+	font-size: 55px;
+	color: #525252;
+	margin-top: 5px;
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s;
+}
+
+
+.contact-info{
+	float: left;
+	width: 75%;
+}
+
+.contact-info h4{
+	font-size: 20px; 
+	font-weight: 400;
+	color: #525252;
+}
+
+.contact-info p{
+	font-size: 15px; 
+	color: #aaa;
+	line-height: 170%;
+	margin-top: 15px;
+}
+
+
+
+
+
+.contact-us{
+	padding: 90px 0px 90px 0px;	
+	background-color: rgba(0,250,255,0.4);
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+.contact-form{
+	margin: 50px 0px 50px 0px;
+}
+
+
+.contact-form input, .contact-form textarea{
+	color: #aaa;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 2px;
+	border: 1px solid #eee;
+	overflow: hidden;
+	width: 100%;
+	margin: 15px 0px 20px 0px; 
+	padding: 12px 15px 12px 15px;
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s;    	
+}
+
+.contact-form input:focus{
+	border-color: #444fa9;
+}
+
+.contact-form textarea{
+	min-height: 150px;
+}
+
+.contact-form textarea:focus{
+	border: 1px solid #444fa9;
+}
+
+
+.submit-button{
+	margin-left: 5%;
+}
+.submit-button:hover{
+	color: #fff;
+	background: #45deb0;
+	
+}
+
+
+
+
+
+/*
+----------------------------------------------------------------
+3.              Login  Part CSS code
+----------------------------------------------------------------
+*/
+
+.login-content{
+	padding-top: 300px;
+	position: relative;
+	width: 100%;
+	height:100%;
+	background-image: url('img/IMG-20190512-WA0001.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+ input[type="text"],input[type="password"]{
+	width: 90%;
+}
+
+@media (max-width: 768px){
+	input[type="text"],input[type="password"]{
+	width: 80%;
+}
+}
+
+	.pink{
+	margin-top: 10px;
+	width: 100%;
+	height: 700px;
+	background-color: pink;
+}
+/*
+----------------------------------------------------------------
+1.               About Section CSS code
+----------------------------------------------------------------
+*/
+.about-section{
+	margin-top: 400px;
+	padding: 100px 0px 90px 0px;
+	background-color: #fff;
+}	
+.about-heading{
+	margin-bottom: 10px;
+}
+.heading-line{
+	display: block;	
+	content: "";
+	width: 50px;
+	height: 1px;
+	background: #45deb0;
+	margin: auto;
+	margin-bottom: 15px;	
+}
+
+.about-heading p{
+	font-size: 16px;
+	font-weight: 400;
+	color: #aaa;
+	line-height: 160%;
+	padding-top: 5px;
+	margin-bottom: 0px;
+}
+.about-heading span{
+	display: block;
+	font-size: 15px;
+	font-weight: 600;
+	color: #45deb0;
+	line-height: 200%;
+}
+
+.message-block{
+	padding: 90px 0px 90px 0px;	
+	background-color: #f1f1f1;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.sir-section{
+	margin-bottom: 50px;
+
+}
+.staff-section{
+	background-color: rgba(0,0,0,0.1);
+	padding-top: 20px;
+}
+.staff-img{
+	
+	border: 1px solid black;
+	border-radius: 25px;
+
+}
+ .staff-details{
+ 	
+margin-bottom: 20px;
+	margin-right: 5px;
+background-color:rgba(0,0,0,0.3);
+border-radius: 25px;
+color: white;
+}
+/*
+----------------------------------------------------------------
+3.              Job  Part CSS code
+----------------------------------------------------------------
+*/
+
+
+.job{
+	margin-top: 120px;
+}
+
+
+/*
+----------------------------------------------------------------
+3.              Result  Part CSS code
+----------------------------------------------------------------
+*/
+
+.result h2{
+font-family: 'Aclonica';
+color: white;
+background-color:  #069370;
+}
+
+   
+
+.topper{
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 15px 0px 15px 0px;
+	
+}
+
+
+
+.topper-img{
+	float: left;
+	width: 50%;
+	text-align: center;
+	padding-top: 15px;
+}
+
+
+.topper-mark{
+	float: right;
+	width: 50%;
+}
+
+.topper-mark h5{
+	font-size: 17px;
+	font-family: 'Aclonica';
+	font-weight: 400;
+	color: #525252;
+	line-height: 180%;
+	margin-left: 15px;
+	margin-bottom: 5px;
+}
+
+.topper-mark p{
+	font-size: 15px;
+	font-weight: 400;
+	color:  #069370;
+	line-height: 180%;
+	margin-left: 15px;
+	margin-bottom: 0px;
+}
+
+
+
+
+
+/*
+----------------------------------------------------------------
+3.              Admin panel
+----------------------------------------------------------------
+*/
+.admin{
+	background-color: #069370;
+	 font-family: 'Aclonica';
+}
+
+
+.admin-top
+{
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  top: 0px;
+  left:10%;
+  z-index: 1;
+}
+
+.admin-logout
+{
+  position: fixed;
+  width: 100%;
+  height: 45px;
+  margin:20px;
+  z-index: 1;
+}
+.admin-controls{
+	margin-top: 10%;
+	position:relative;
+background-color: rgba(255,255,255,0.5);
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.admin-controls  a{
+color:white;
+text-decoration:none;
+}
+table{
+    border-collapse:collapse;
+    font-size:12px;
+    margin:0px;
+    padding:0px;
+   width:100%;
+}
+
+tr:nth-child(even){
+	background-color: #069370;
+}
+
+/*
+----------------------------------------------------------------
+3.             TEXT BLINKING AND TEXT HIGHLIGHT
+----------------------------------------------------------------
+*/
+
+
+.blinking{
+    animation:blinkingText 0.8s 2;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+   
+    50%{    color: red; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+.highlight {
+    background-color: #fff2ac;
+    background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+}
