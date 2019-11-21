@@ -1,0 +1,129 @@
+<html>
+<head>
+	<title>Login-Gyana Vikash Junior College</title>
+	<link rel="shortcut icon" href="../img/logo.jpg" />	
+	<meta name="viewport" content="width=device-width">
+<!--
+	 _____________Font Awesome CDN stackpath&cloudfare_______________
+	-->
+	 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
+	<!--
+	 _____________Jquery cdn version 3.4.1_______________
+	-->
+	 <script src="https://code.jquery.com/jquery-3.4.1.js"
+	 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	 crossorigin="anonymous"></script>
+<!--
+	 _____________BOOTSTRAP  CSS CDN version 3.4_______________
+	-->
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!--
+	 _____________Ajax Jquery by bootstrap_______________
+	-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!--
+	 ____________BOOTSTRAP  Javascript CDN version 3.4_______________
+	-->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="../style.css" />
+<!--
+	 ____________Menu-Toggle Mobile Version_______________
+	-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+	$('.menu-toggle').click(function(){
+	$('.menu-toggle').toggleClass('active');
+	$('nav').toggleClass('active');
+	})
+		})
+	</script>
+</head>
+	
+<!--
+	 ________________________________Body Part_______________________________________________
+	-->
+<body>
+	<header>
+
+		<a href="home.php" class="logo" title="Gyana Vikash Junior College">  <img src="img/logo.jpg" class="logo-img" alt=""></img>  Gyana Vikash Junior College  </a>
+		<div class="menu-toggle"></div>
+		<nav>
+	<ul>
+		<li> <a href="home.php">Home</a> </li>
+		<li> <a href="about.php">About</a> </li>
+		<li> <a href="test.php">Activity</a> </li>
+		<li> <a href="admission.php">Admission</a> </li>
+			<li> <a href="job.php">Job</a> </li>
+		<li> <a href="contact.php" >Contact</a> </li>
+		<li> <a href="#" class="active">Login</a> </li>
+	</ul>
+		</nav>
+		<div class="clearfix"></div>
+	</header>
+<!-- Login START -->
+<div class="login-content">
+	
+<div class="container">		
+		<div class="row">
+
+<div class="col-sm-4"></div>
+<form  method="post" action="control.php">
+    <div class="col-sm-4">        
+ <div class="panel panel-info">
+                   <div class="panel-heading">
+                            <h3 class="panel-title"><span class="glyphicon glyphicon-exclamation-sign"></span>
+				<label>Login Type:</label>
+                <select name="utype">
+                    <option value="" hidden="hidden">Select</option>
+                    <option value="student">STUDENT</option>
+                    <option value="teacher">TEACHER</option>
+                    <option value="admin">ADMIN</option>
+                </select>
+                            
+                            </h3>
+                   </div>
+	
+                    <div class="panel-body logincontent">
+             <h5 class="text-danger">before login select above login type</h5>
+                               <div class="form-group">
+                                      <label>USER-ID:</label>
+                                       <div class="input-group">
+                                          <span class="input-group-addon">
+                                              <span class="glyphicon glyphicon-user"></span>
+                                          </span>
+                                          <input type="text" name="uname" placeholder="enter your id">
+                                      </div>
+                                </div>
+                         
+                               <div class="form-group">
+                                      <label>Password:</label>
+                                       <div class="input-group">
+                                          <span class="input-group-addon">
+                                              <span class="glyphicon glyphicon-lock"></span>
+                                          </span>
+                           <input type="password" name="pwd" placeholder="enter your password">
+                                      </div>
+                                </div>
+                         
+                    </div>
+
+<center><button type="submit" name="send" class="submit-button btn btn-outline-success">Login</button></center>
+  <h5 class="text-center text-danger">Not a member? &nbsp;<a href="sign-up.php">Sign Up</a></h5>
+</div>
+  </div>
+ </form>
+            <div class="col-sm-4"></div>
+		</div>
+	</div>
+</div>
+
+
+	
+ 
+      
+	<div class="pink"></div>
+	<div class="footer"></div>
+</body>
+</html>
