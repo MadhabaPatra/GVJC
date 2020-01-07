@@ -7,9 +7,18 @@ slno          Content                Description
  1.         Header Part        font awesome,code jquery,javascript-A
  1.         Header Part        font awesome,code jquery,javascript-A
 */
+*{
+	scroll-behavior: smooth;	
+}
 body{
-	margin: 0px;
-	padding: 0px;
+margin: 0px;
+padding: 0px;	
+}
+.green-section{
+	background: #A1FFCE;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
 }
 /*
 ----------------------------------------------------------------
@@ -38,6 +47,7 @@ font-weight: 700;
 text-decoration: none;
 padding-left: 20px;
 line-height: 60px;
+animation-delay: 4s;
 }
 .logo:hover{
 	text-decoration:none;
@@ -49,6 +59,7 @@ line-height: 60px;
 }
 nav{
 	float: right;
+	
 }
 .clearfix{
 	clear: both;
@@ -57,6 +68,7 @@ nav ul{
 	margin: 10px;
 	padding: 0px;
 	display: flex;
+   
 }
 nav ul li{
 	list-style: none;
@@ -67,12 +79,14 @@ nav ul li a{
 	padding: 10px 20px;
 	text-decoration: none;
 	color: #262626;
+	font-family: 'Poppins', sans-serif;
 }
 nav ul li a.active,nav ul li a:hover{
 	background: #069370;
 	transition: 0.5s;
 	color: #fff;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 
@@ -113,6 +127,7 @@ nav ul li a.active,nav ul li a:hover{
 	nav.active{
 		display: block;
 		width: 100%;
+		
 	}
 	nav.active ul{
 		display: block;
@@ -130,30 +145,66 @@ nav ul li a.active,nav ul li a:hover{
 	}
 .item{
 	width: 100%;
-	height: 600px;
+	height: 90vh;
 }
-@media (max-width:768px) {
+.carousel-indicators{
+	bottom: 100px !important;
+	position: absolute;
+}
+.carousel-indicators li{
+	background-color: #069370 !important;
+	border: 1px solid black;
+	
+}
+.carousel-caption h3{
+	font-size: 48px;
+	font-weight: bold;
+	color: #f9f9f9 !important;
+	font-style: sofia;
+	bottom: 200px;
+	position: relative;
+	}
+	.carousel-caption p{
+		font-size: 28px;
+		font-weight: bold;
+		color: #6ae2c4 !important;
+		bottom: 150px;
+		position: relative;
+		}
+@media only screen and (max-width:608px) {
 	.slider-section{
 		margin-top: 50px;
 	width: 100%;
 	height: 100%;
 	}
-	.item{
-		width: 100%;
-		height: 200px;
-	}
-   
+	
+	.carousel-caption h3{
+		font-size: 28px;
+		bottom: 100px;
+		}
+		.carousel-caption p{
+			font-size: 18px;
+			bottom: 50px;
+		}
+		.item{
+			width: 100%;
+			height: 85vh;
+		}
+		
 }
 
-
+.notice{
+    margin: 0px;
+}
 .reason-section{
-	background-color: rgba(0,255,0,0.1);
+	margin-top: 0% !important;
 }
  .reason-section h2{
 font-family: 'Sofia';
 text-align: center;
 }
 .service-box{
+	font-family: 'Poppins', sans-serif;
 	background: #fff;
 	border: 1px solid #e6e6e6;
 	padding: 20px;
@@ -211,23 +262,64 @@ text-align: center;
     
 }
 
-
+.jumbotron{
+	background-size: cover;
+	background-attachment: fixed;
+	background-image:  linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)),url('img/IMG-20190512-WA0001.jpg');
+	margin-bottom: 0px;
+}
 
 /*
-----------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------
 3.              Contact  Part CSS code
-----------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
 */
+.scroll-container  {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	width: 100%;
+	animation-iteration-count: infinite;
+  }
+  .scroll-container a{
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+  }
+  .scroll-container a:hover{
+	  animation-name: none;
+  }
+.space{
+	width: 100%;
+	height:10vh;
+	
+}
+.arrow {
+	box-sizing: border-box;
+	height: 1vw;
+	width: 1vw;
+	border-style: solid;
+	border-color: black;
+	border-width: 0px 2px 2px 0px;
+	transform: rotate(45deg);
+	transition: border-width 150ms ease-in-out;
+	
+  }
+  
+  .arrow:hover {
+	border-bottom-width: 4px;
+	border-right-width: 4px;
+  }
 
 .contact{
 	width: 100%;
-	height: 500px;
+	height: 93vh;
 	background-attachment: fixed;
 	background-image: url('img/contact.jpg');
 	background-size: 100% 100%;
 }
 .contact h1{
-	top: 40%;
+	top: 50%;
 	left: 50%;
 	position: absolute;
 	color:#069370;
@@ -236,25 +328,22 @@ text-align: center;
 	transform: translate(-50%,-50%);
 }
 
-@media (max-width: 768px)
-{
+@media only screen and (max-width:768px) {
+	
 	.contact h1{
-	font-size: 40px;
-	font-weight: 300;
-    top:20%;
-}
-.contact{
-	height: 400px;
-}
+	top: 80% ;
+	font-size: 32px;
+	font-weight: bold;
+	}
+	.arrow {
+		height: 2vw;
+		width: 2vw;
+	}
 
 }
-@media (max-height: 468px)
-{
 
-.contact h1{
-     top:50%;
-}
-}
+
+
 
 .contact-box{
 	border-bottom: 2px solid #45deb0;
@@ -307,17 +396,17 @@ text-align: center;
 
 
 
-.contact-us{
+.gvjc-form{
 	padding: 90px 0px 90px 0px;	
-	background-color: rgba(0,250,255,0.4);
+	background: #069370;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left,  rgb(18, 221, 164), #069370);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left,rgb(18, 221, 164), #069370); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: 'Poppins', sans-serif;
+	color: #f1f1f1;
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-
-
-
-
 
 .contact-form{
 	margin: 50px 0px 50px 0px;
@@ -325,11 +414,11 @@ text-align: center;
 
 
 .contact-form input, .contact-form textarea{
-	color: #aaa;
+	color: #1FA2FF;  
 	font-size: 14px;
 	font-weight: 500;
 	border-radius: 2px;
-	border: 1px solid #eee;
+	border: 1px solid rgb(206, 192, 192);
 	overflow: hidden;
 	width: 100%;
 	margin: 15px 0px 20px 0px; 
@@ -339,7 +428,7 @@ text-align: center;
 }
 
 .contact-form input:focus{
-	border-color: #444fa9;
+	border-color:  #1FA2FF;  
 }
 
 .contact-form textarea{
@@ -351,14 +440,7 @@ text-align: center;
 }
 
 
-.submit-button{
-	margin-left: 5%;
-}
-.submit-button:hover{
-	color: #fff;
-	background: #45deb0;
-	
-}
+
 
 
 
@@ -472,11 +554,34 @@ color: white;
 */
 
 
-.job{
-	margin-top: 120px;
+.job-form{
+	padding: 90px 0px 90px 0px;	
+	background: #069370;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left,  rgb(18, 221, 164), #069370);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left,rgb(18, 221, 164), #069370); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: 'Poppins', sans-serif;
+	color: #f1f1f1;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
-
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
 /*
 ----------------------------------------------------------------
 3.              Result  Part CSS code
@@ -485,8 +590,9 @@ color: white;
 
 .result h2{
 font-family: 'Aclonica';
-color: white;
-background-color:  #069370;
+color:  #069370;
+margin-top: 0px;
+padding-top: 10px;
 }
 
    
@@ -536,7 +642,10 @@ background-color:  #069370;
 
 
 
-
+.video-content{
+	width: 80%;
+	
+}
 
 /*
 ----------------------------------------------------------------

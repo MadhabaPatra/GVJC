@@ -18,7 +18,12 @@
 	 _____________BOOTSTRAP  CSS CDN version 3.4_______________
 	-->
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
+ <!--
+	 _____________Google fonts css_______________
+	-->
+	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 <!--
 	 _____________Ajax Jquery by bootstrap_______________
 	-->
@@ -29,16 +34,14 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
    <link rel="stylesheet" type="text/css" href="../style.css" />
 <!--
-	 ____________Menu-Toggle Mobile Version_______________
-	-->
-	<script type="text/javascript">
-		$(document).ready(function(){
-	$('.menu-toggle').click(function(){
-	$('.menu-toggle').toggleClass('active');
-	$('nav').toggleClass('active');
-	})
-		})
-	</script>
+	 _____________Animation _______________ ref: (https://github.com/daneden/animate.css)
+	 -->
+	 <link rel="stylesheet" type="text/css" href="animate.css">
+	 <!--
+____________Main Javascript_______________
+-->
+<script src="../js/main.js" type="text/javascript">
+</script>
 </head>
 	
 <!--
@@ -47,17 +50,17 @@
 <body>
 	<header>
 
-		<a href="home.php" class="logo" title="Gyana Vikash Junior College">  <img src="img/logo.jpg" class="logo-img" alt=""></img>  Gyana Vikash Junior College  </a>
+		<a href="../index.html" class="logo" title="Gyana Vikash Junior College">  <img src="img/logo.jpg" class="logo-img" alt=""></img>  Gyana Vikash Junior College  </a>
 		<div class="menu-toggle"></div>
 		<nav>
 	<ul>
-		<li> <a href="../index.html" >Home</a> </li>
-		<li> <a href="#" class="active">About</a> </li>
-		<li> <a href="test.php">Activity</a> </li>
-		<li> <a href="../admission">Admission</a> </li>
-			<li> <a href="../job">Job</a> </li>
-		<li> <a href="../contact">Contact</a> </li>
-		<li> <a href="../login">Login</a> </li>
+			<li class="animated bounceIn" style="animation-delay: 1s"> <a href="../index.html" class="active"><i class="fas fa-home"></i>	</a> </li>
+			<li class="animated bounceIn" style="animation-delay: 1.5s"> <a href="#">About</a> </li>
+			<li class="animated bounceIn" style="animation-delay: 2s"> <a href="../test">Activity</a> </li>
+			<li class="animated bounceIn" style="animation-delay: 2.5s"> <a href="../admission">Admission</a> </li>
+			<li class="animated bounceIn" style="animation-delay: 3.5s"> <a href="../job">Job</a> </li>
+			<li class="animated bounceIn" style="animation-delay: 4s"> <a href="../contact">Contact</a> </li>
+			<li class="animated bounceIn" style="animation-delay: 4.5s"> <a href="../login">Login<i class="fas fa-sign-in-alt"></i></a> </li>
 	</ul>
 		</nav>
 		<div class="clearfix"></div>
