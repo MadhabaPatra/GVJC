@@ -66,54 +66,71 @@
 		<div class="clearfix"></div>
 	</header>
  
-<div class="contact">
-	
-
+<div class="contact-poster">
 <h1>Contact Us</h1> 
-
-
 </div>
-<!-- thank you message or alert message -->
-	<div class="text-center"><strong><h2 class="text-danger blinking">
-		    <?php
-		    echo $msg;
-		    ?></h2></strong>
-		    </div>
-		    <div class="text-center"> <strong><span class="text-success blinking">
-		        <?php
-		        echo $successmsg;
-		        ?>
-		         </span>
-		        <span class="highlight">
-		             <?php
-		            echo $genId;
-		             ?>
-		        </span>
-		      </strong> 
-				  </div>
-				  
 
 				  <div class="container scroll-container">
-					 
 				  <a data-scroll href="#c-form" class="animated shake"> 
 				  <div class="arrow" id="c-form" style="animation-delay: 1s"></div>  </a>
 				  
 				</div>
 				  <div class="space"></div>				  
+
 <!-- Contact START -->
-	<div class="container">		
+
+<div class="gvjc-form" >
+	<div class="container">
+		<div class="section-heading center-holder">
+			<h2 class="text-center">Feel Free To Contact Us</h2>
+			<br>
+		</div>
+		<div class="col-sm-6">
+			<form action="https://getform.io/f/a0f62217-6971-4a9c-9a3a-41f5cef1b177"  method="post" class="contact-form">
+				
+				<div class="col-xs-12">
+						<input type="name" name="name" placeholder="Your Full-Name">
+					</div>
+					<div class="col-xs-12">
+						<input type="number" maxlength="10" name="phone" placeholder="Phone Number" oninput="javascript: if (this.value.length > this.maxLength)this.value=this.value.slice(0,this.maxLength);" >
+					</div>
+                       <div class="col-xs-12">
+				<input type="email" name="subject" placeholder="Email Address">
+					</div>
+					<div class="col-xs-12">
+						<textarea name="message" placeholder="Your Message"></textarea>
+					</div>
+					<center>
+						<button type="submit" name="send" class="submit-button btn btn-success" >Send Message</button>
+					</center>						
+			</form>	
+		  </div>
+		<div class="col-sm-6">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.679806858559!2d84.75335391485616!3d19.38301218691247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3d4e13ac4cebeb%3A0xb6707ead8231a1df!2sGyana%20Vikash%20Junior%20College!5e0!3m2!1sen!2sin!4v1578465091153!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+			<div class="row social-media">
+				<div class="col-md-4 col-xs-4"><a href="#"><i class="fab fa-facebook"><span>/gvjcb</span></i></a></div>
+				<div class="col-md-4 col-xs-4"><a href="#"><i class="fab fa-twitter"></i></a></div>
+				<div class="col-md-4 col-xs-4"><a href="#"><i class="fab fa-whatsapp"><span>9556774243</span></i></a></div>
+			</div>
+		  </div>
+		 
+	</div>		
+</div>
+
+<!-- Contact Box  -->
+<div class="container">		
 		<div class="row">
 			<a href="https://goo.gl/maps/Zu2hkP7L72zMz9xz7">
 			<div class="col-md-6 col-sx-6 col-xs-12">
 				<div class="contact-box clearfix">
 					<div class="contact-icon">
-						<i class="fa fa-map-marker"></i>
+						<i class="fa fa-map-marker-alt"></i>
 					</div>
 					<div class="contact-info">
 						<h4>Our Address</h4>
-						<p>Gyana Vikash Junior College
+						<p>Gyana Vikash Junior College <br>Gundicha Vihar Campus,
 
-Raghunathpur <br>Pin No-761003 <br> Berhampur,Odisha</p>
+Raghunathpur<br>Pin No-761003  <br> Govindapur Berhampur,Odisha</p>
 					</div>
 				</div>				
 			</div>
@@ -125,65 +142,16 @@ Raghunathpur <br>Pin No-761003 <br> Berhampur,Odisha</p>
 						<i class="fa fa-phone"></i>
 					</div>
 					<div class="contact-info">
-						<h4>Phone & Email</h4>
-						<p>+91 9556774243<br> 8260602211, 8895827878 <br> Gyanavikash@yahoo.com</p>
-
+						<h4>Phone ,Email &amp;Website</h4>
+						<p>+91 9556774243<br> 8260602211, 8895827878 <br> Gyanavikash@yahoo.com<br>gyanavikash.com</p>
+                           
 					</div>
 				</div>				
 			</div>
            </a>
 		</div>
 	</div>
-<!-- Contact START -->
-
-    
-
-
-
-
-<div class="gvjc-form" >
-	<div class="container">
-		<div class="section-heading center-holder">
-			<h2 class="text-center">Feel Free To Contact Us</h2>
-	
-			<div class="alert alert-danger text-center">
-				 All Fields Are Required!!!
-			</div>
-			
-	
-		</div>			
-		<div>
-		<form action="https://getform.io/f/a0f62217-6971-4a9c-9a3a-41f5cef1b177"  method="post" class="contact-form">
-				<div class="row">
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<input type="text" name="name" placeholder="Your Full-Name">
-					</div>
-
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<input type="number" maxlength="10" name="phone" placeholder="Phone Number" oninput="javascript: if (this.value.length > this.maxLength)this.value=this.value.slice(0,this.maxLength);" >
-					</div>
-                       <div class="col-xs-12">
-				<input type="text" name="subject" placeholder="Subject">
-					</div>
-					<div class="col-xs-12">
-						<textarea name="message" placeholder="Your Message"></textarea>
-					</div>
-
-					<center>
-						<button type="submit" name="send" class="submit-button btn btn-outline-success" >Send Message</button>
-					</center>
-				</div>							
-			</form>	
-		</div>
-	</div>		
-</div>
 <!-- Contact END -->
-
-
-
-
-
-
 
 	<div class="footer"></div>
 </body>
