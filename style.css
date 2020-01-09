@@ -7,6 +7,7 @@ slno          Content                Description
  1.         Header Part        font awesome,code jquery,javascript-A
  1.         Header Part        font awesome,code jquery,javascript-A
 */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 *{
 	scroll-behavior: smooth;	
 }
@@ -28,14 +29,14 @@ padding: 0px;
 
 header{
 	position: fixed;
-  width: 90%;
+   width: 90%;
 	background: #fff;
 	box-sizing: border-box;
 	border-radius: 4px;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
- top: 0px ;
-left: 5%;
-z-index: 99999;
+ 	top: 0px ;
+	left: 5%;
+	z-index: 99999;
 }
 .logo{
 color: #069370;
@@ -46,16 +47,16 @@ float: left;
 font-weight: 700;
 text-decoration: none;
 padding-left: 20px;
-line-height: 60px;
+line-height: 180%;
 animation-delay: 4s;
 }
 .logo:hover{
 	text-decoration:none;
 }
 .logo-img{
-	padding-top: 5px;
 	height: 55px;
 	width: 65px;
+
 }
 nav{
 	float: right;
@@ -145,11 +146,16 @@ nav ul li a.active,nav ul li a:hover{
 	}
 .item{
 	width: 100%;
-	height: 90vh;
+	height: 100vh;
+	
+}
+.home-img{
+	opacity: 0.6;
 }
 .carousel-indicators{
-	bottom: 100px !important;
+	bottom: 10px !important;
 	position: absolute;
+	z-index: 1 !important;
 }
 .carousel-indicators li{
 	background-color: #069370 !important;
@@ -159,18 +165,22 @@ nav ul li a.active,nav ul li a:hover{
 .carousel-caption h3{
 	font-size: 48px;
 	font-weight: bold;
-	color: #f9f9f9 !important;
-	font-style: sofia;
+	font-family: 'Roboto Slab', serif;
+	color: white !important;
+	letter-spacing: 15px;
 	bottom: 200px;
 	position: relative;
 	}
 	.carousel-caption p{
 		font-size: 28px;
-		font-weight: bold;
-		color: #6ae2c4 !important;
+		color: rgb(225, 240, 16)!important;
 		bottom: 150px;
+		font-weight: bold;
+		letter-spacing: 5px;
 		position: relative;
+		
 		}
+	
 @media only screen and (max-width:608px) {
 	.slider-section{
 		margin-top: 50px;
@@ -181,21 +191,17 @@ nav ul li a.active,nav ul li a:hover{
 	.carousel-caption h3{
 		font-size: 28px;
 		bottom: 100px;
+		letter-spacing: 3px;
 		}
 		.carousel-caption p{
 			font-size: 18px;
 			bottom: 50px;
 		}
-		.item{
-			width: 100%;
-			height: 85vh;
-		}
+		
 		
 }
 
-.notice{
-    margin: 0px;
-}
+
 /*
 ----------------------------------------------------------------
 1.               Admssion And Notice Board And Achievment Css
@@ -203,25 +209,32 @@ nav ul li a.active,nav ul li a:hover{
 */
 .link-box{
     width: 100%;
-	padding: 10px 10px 10px 10px;
+	padding: 10px 15% 10px 15%;
 }
 .details-box{
 	padding: 30px;
 	height: 30vh;
-	margin-bottom: 45px; /*for mobile version  */
+	 margin-bottom: 20px;/*for mobile version  */
 }
 .detail{
 	font-family: poppins;
 	color: white !important;	
 }
 .details-box i{
+	z-index: 99999;
+	position: fixed;
 	font-size: 25px;
 	background: white;
 	border-radius: 50%;
 	padding: 10px;
 	text-align: center;
 }
-
+.details-box i.more{
+bottom: -5px;
+left: 50%;
+position: absolute;
+transform: translate(-50%);
+}
 .link-box #admission-enquiry{
 	background: #c32a07;
 	padding: 30px;
@@ -229,7 +242,7 @@ nav ul li a.active,nav ul li a:hover{
 .link-box #admission-enquiry i{
 	color: #c32a07;
 	border: 2px solid#c32a07;
-	
+	bottom: -1px;
 }
 .link-box #notice-board{
 	background: #2196F3;
@@ -238,7 +251,7 @@ nav ul li a.active,nav ul li a:hover{
 .link-box #notice-board i{
 	color: #2196F3;
 	border: 2px solid#2196F3;
-	
+	position: fixed;
 }
 
 .link-box #achievement{
@@ -247,6 +260,7 @@ nav ul li a.active,nav ul li a:hover{
 }
 .link-box #achievement i{
 	color: #f0bc01;
+	
 	border: 2px solid#f0bc01;
 }
 
@@ -276,12 +290,69 @@ nav ul li a.active,nav ul li a:hover{
 }
 /*
 ----------------------------------------------------------------
-          Remove Black Shadow Carousel
+1.               Achievement  Part CSS code
+----------------------------------------------------------------
+*/
+#topperCarousel .item{
+	height: 10vh;
+}
+#achievement h3{
+	top: 0px;
+	margin: 11px;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	z-index: 999;
+}
+
+
+.topper-img{
+	float: left;
+	width: 50%;
+	height: 25vh;
+}
+
+.topper-mark{
+	float: left;
+	width: 50%;
+}
+
+.topper-mark h5{
+	font-size: 17px;
+	font-family: 'Aclonica';
+	font-weight: 400;
+	
+}
+.topper-mark p{
+	letter-spacing: 1px;
+}
+
+/*
+----------------------------------------------------------------
+          Remove Black Shadow and Carousel
 ----------------------------------------------------------------
 */
 .carousel-control.left, .carousel-control.right {
 	background-image:none !important;
 	filter:none !important;
+
+	
+ }
+ .carousel:hover i{
+	 display: block;
+	 
+ }
+ .carousel-control i{
+	border-radius: 50%;
+	padding: 10px;
+	bottom: 70px;
+	position: fixed;
+	display: none;
+ }
+ @media only screen and (max-width:608px){
+	.carousel i{
+		display: block;
+	}
  }
 
 /*
@@ -362,6 +433,15 @@ text-align: center;
 	margin-bottom: 0px;
 }
 
+/*
+------------------------------------------------------------------------------------------------------------------------------------------
+3.              Youtube Video   Part CSS code
+------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+iframe{
+	height: 30vh;
+}
 /*
 ------------------------------------------------------------------------------------------------------------------------------------------
 3.              Contact  Part CSS code
@@ -704,70 +784,14 @@ color: white;
     opacity: 0;
     filter: alpha(opacity=0);
 }
-/*
-----------------------------------------------------------------
-3.              Result  Part CSS code
-----------------------------------------------------------------
-*/
-
-.result h2{
-font-family: 'Aclonica';
-color:  #069370;
-margin-top: 0px;
-padding-top: 10px;
-}
-
-   
-
-.topper{
-	background: #fff;
-	border: 1px solid #e6e6e6;
-	padding: 10px;
-	border-radius: 5px;
-	margin: 15px 0px 15px 0px;
-	
-}
 
 
 
-.topper-img{
-	float: left;
-	width: 50%;
-	text-align: center;
-	padding-top: 15px;
-}
-
-
-.topper-mark{
-	float: right;
-	width: 50%;
-}
-
-.topper-mark h5{
-	font-size: 17px;
-	font-family: 'Aclonica';
-	font-weight: 400;
-	color: #525252;
-	line-height: 180%;
-	margin-left: 15px;
-	margin-bottom: 5px;
-}
-
-.topper-mark p{
-	font-size: 15px;
-	font-weight: 400;
-	color:  #069370;
-	line-height: 180%;
-	margin-left: 15px;
-	margin-bottom: 0px;
-}
 
 
 
-.video-content{
-	width: 80%;
-	
-}
+
+
 
 /*
 ----------------------------------------------------------------
