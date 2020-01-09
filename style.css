@@ -1,13 +1,17 @@
 /*
-----------------------------------------------------------------
-slno          Content                Description
---------- ------------------- ------------------------------------
- 1.         Header Part        font awesome,code jquery,javascript-A
- 1.         Header Part        font awesome,code jquery,javascript-A
- 1.         Header Part        font awesome,code jquery,javascript-A
- 1.         Header Part        font awesome,code jquery,javascript-A
+HOME PAGE
+----------------------------
+slno          Content  
+--------- ------------------
+ 1.			Header Part  
+ 2.			Slider Image 
+ 3.			Link Box    
+ 4.			Remove Black Shadow and Carousel
+ 5.			Resaons Why
+ 6.			About College And Gallery
+ 7.			Youtube Video
 */
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
 *{
 	scroll-behavior: smooth;	
 }
@@ -29,7 +33,7 @@ padding: 0px;
 
 header{
 	position: fixed;
-   width: 90%;
+    width: 90%;
 	background: #fff;
 	box-sizing: border-box;
 	border-radius: 4px;
@@ -80,14 +84,14 @@ nav ul li a{
 	padding: 10px 20px;
 	text-decoration: none;
 	color: #262626;
+	font-weight: bold;
 	font-family: 'Poppins', sans-serif;
 }
 nav ul li a.active,nav ul li a:hover{
 	background: #069370;
-	transition: 0.5s;
 	color: #fff;
+	transition: 0.5s;
 	text-decoration: none;
-	font-weight: bold;
 }
 
 
@@ -204,7 +208,7 @@ nav ul li a.active,nav ul li a:hover{
 
 /*
 ----------------------------------------------------------------
-1.               Admssion And Notice Board And Achievment Css
+3.               Link Box  Css
 ----------------------------------------------------------------
 */
 .link-box{
@@ -244,6 +248,12 @@ transform: translate(-50%);
 	border: 2px solid#c32a07;
 	bottom: -1px;
 }
+
+/*
+----------------------------------------------------------------
+3.               (b)Notice  Part CSS code
+----------------------------------------------------------------
+*/
 .link-box #notice-board{
 	background: #2196F3;
 	padding: 0px;
@@ -253,25 +263,6 @@ transform: translate(-50%);
 	border: 2px solid#2196F3;
 	position: fixed;
 }
-
-.link-box #achievement{
-	background: #f0bc01;
-		
-}
-.link-box #achievement i{
-	color: #f0bc01;
-	
-	border: 2px solid#f0bc01;
-}
-
-
-/*
-----------------------------------------------------------------
-1.               Notice  Part CSS code
-----------------------------------------------------------------
-
-*/
-
 #noticeCarousel .item{
 	height: 15vh;
 }
@@ -290,9 +281,20 @@ transform: translate(-50%);
 }
 /*
 ----------------------------------------------------------------
-1.               Achievement  Part CSS code
+3.              (c) Achievement  Part CSS code
 ----------------------------------------------------------------
 */
+
+.link-box #achievement{
+	background: #f0bc01;
+		
+}
+.link-box #achievement i{
+	color: #f0bc01;
+	
+	border: 2px solid#f0bc01;
+}
+
 #topperCarousel .item{
 	height: 10vh;
 }
@@ -329,7 +331,7 @@ transform: translate(-50%);
 
 /*
 ----------------------------------------------------------------
-          Remove Black Shadow and Carousel
+4          Remove Black Shadow and Carousel
 ----------------------------------------------------------------
 */
 .carousel-control.left, .carousel-control.right {
@@ -357,7 +359,7 @@ transform: translate(-50%);
 
 /*
 ----------------------------------------------------------------
-1.               Resaons Why  Part CSS code
+5.               Resaons Why  Part CSS code
 ----------------------------------------------------------------
 */
 .reason-section{
@@ -425,7 +427,11 @@ text-align: center;
     
     
 }
-
+/*
+------------------------------------------------------------------------------------------------------------------------------------------
+6.              About College And Gallery
+------------------------------------------------------------------------------------------------------------------------------------
+*/
 .jumbotron{
 	background-size: cover;
 	background-attachment: fixed;
@@ -435,16 +441,109 @@ text-align: center;
 
 /*
 ------------------------------------------------------------------------------------------------------------------------------------------
-3.              Youtube Video   Part CSS code
+7.              Youtube Video   Part CSS code
+------------------------------------------------------------------------------------------------------------------------------------
+*/
+.video-section{
+	margin: 10% 15% 10% 15%;
+}
+.video-section h1{
+	font-family: poppins;
+	font-weight: bold;
+	font-size: 48px;
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+}
+.view-more{
+	bottom: 0px;
+	position: absolute;
+	left: 50%;
+	width: 92.5%;
+	transform: translate(-50%);
+	text-align: center;
+	background: rgb(238, 226, 226);
+}
+.view-more a{
+	color: green;
+	font-size: 15px;
+	font-family: poppins;
+}
+.view-more a:hover{
+	text-decoration: none;
+}
+.video-section p{
+	font-family: poppins;
+	font-size: 15px;
+	
+}
+
+iframe{
+	height: 40vh;
+	
+}
+@media only screen and (max-width:608px){
+	.video-section{
+		margin: 10% 5% 10% 5%;
+	}
+	.video-section h1{
+		font-size: 28px;
+		margin: 0px 0px 10px 0px;
+		padding: 0px;
+	}
+	iframe{
+		height: 25vh;
+	}
+}
+/*
+Contact PAGE
+----------------------------
+slno          Content  
+--------- ------------------
+ 1.			Main Poster Telephone  
+ 2.			Animated Down Arrow 
+ 3.			Contact us Box    
+ 4.			Social Icons	
+*/
+
+/*
+------------------------------------------------------------------------------------------------------------------------------------------
+1.              Main Poster Telephone
 ------------------------------------------------------------------------------------------------------------------------------------
 */
 
-iframe{
-	height: 30vh;
+.contact-poster{
+	width: 100%;
+	height: 93vh;
+	background-attachment: fixed;
+	background-image: url('img/contact.jpg');
+	background-size: 100% 100%;
+}
+.contact-poster h1{
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	color:#069370;
+	font-size: 50px;
+	font-weight: 400;
+	transform: translate(-50%,-50%);
+}
+
+@media only screen and (max-width:768px) {
+	
+	.contact-poster h1{
+	top: 80% ;
+	font-size: 32px;
+	font-weight: bold;
+	}
+	.arrow {
+		height: 2vw;
+		width: 2vw;
+	}
+
 }
 /*
 ------------------------------------------------------------------------------------------------------------------------------------------
-3.              Contact  Part CSS code
+2.              Animated Down Arrow 
 ------------------------------------------------------------------------------------------------------------------------------------
 */
 .scroll-container  {
@@ -484,38 +583,11 @@ iframe{
 	border-right-width: 4px;
   }
 
-.contact-poster{
-	width: 100%;
-	height: 93vh;
-	background-attachment: fixed;
-	background-image: url('img/contact.jpg');
-	background-size: 100% 100%;
-}
-.contact-poster h1{
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	color:#069370;
-	font-size: 50px;
-	font-weight: 400;
-	transform: translate(-50%,-50%);
-}
-
-@media only screen and (max-width:768px) {
-	
-	.contact-poster h1{
-	top: 80% ;
-	font-size: 32px;
-	font-weight: bold;
-	}
-	.arrow {
-		height: 2vw;
-		width: 2vw;
-	}
-
-}
-
-
+/*
+------------------------------------------------------------------------------------------------------------------------------------------
+3.              Contact us Box 
+------------------------------------------------------------------------------------------------------------------------------------
+*/
 
 
 .contact-box{
@@ -567,63 +639,9 @@ iframe{
 	margin-top: 15px;
 }
 
-
-
-
-/*
-------------------------------------------------------------------------------------------------------------------------------------------
-              Form  Part CSS code
-------------------------------------------------------------------------------------------------------------------------------------
-*/
-.gvjc-form{
-	padding: 90px 0px 90px 0px;	
-	background: #069370;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left,  rgb(18, 221, 164), #069370);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left,rgb(18, 221, 164), #069370); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	font-family: 'Poppins', sans-serif;
-	color: #f1f1f1;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-.gvjc-form input, .gvjc-form textarea{
-	color: #1FA2FF;  
-	font-size: 14px;
-	font-weight: 500;
-	border-radius: 2px;
-	border: 1px solid rgb(206, 192, 192);
-	overflow: hidden;
-	width: 100%;
-	margin: 0px 0px 20px 0px; 
-	padding: 12px 15px 12px 15px;
-	-webkit-transition-duration: .3s;
-	transition-duration: .3s;    	
-}
-
-.gvjc-form input:focus{
-	border-color:  #1FA2FF;  
-}
-
-.gvjc-form textarea{
-	min-height: 150px;
-}
-
-.gvjc-form textarea:focus{
-	border: 1px solid #444fa9;
-}
 /*
 ----------------------------------------------------------------
-             job admission and contact submit button
-----------------------------------------------------------------
-*/
-.submit-button{
-margin-bottom: 20px;
-}
-
-/*
-----------------------------------------------------------------
-            Social Icons
+4.            Social Icons
 ----------------------------------------------------------------
 */
 .social-media{
@@ -648,39 +666,8 @@ margin-bottom: 20px;
 }
 
 
-/*
-----------------------------------------------------------------
-3.              Login  Part CSS code
-----------------------------------------------------------------
-*/
 
-.login-content{
-	padding-top: 300px;
-	position: relative;
-	width: 100%;
-	height:100%;
-	background-image: url('img/IMG-20190512-WA0001.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-}
 
- input[type="text"],input[type="password"]{
-	width: 90%;
-}
-
-@media (max-width: 768px){
-	input[type="text"],input[type="password"]{
-	width: 80%;
-}
-}
-
-	.pink{
-	margin-top: 10px;
-	width: 100%;
-	height: 700px;
-	background-color: pink;
-}
 /*
 ----------------------------------------------------------------
 1.               About Section CSS code
@@ -749,13 +736,11 @@ background-color:rgba(0,0,0,0.3);
 border-radius: 25px;
 color: white;
 }
+
 /*
-----------------------------------------------------------------
-3.              Job  Part CSS code
-----------------------------------------------------------------
+Job Part
+----------------------------.
 */
-
-
 .job-form{
 	padding: 90px 0px 90px 0px;	
 	background: #069370;  /* fallback for old browsers */
@@ -787,7 +772,91 @@ color: white;
 
 
 
+/*
+Utility 
+----------------------------
+slno          Content  
+--------- ------------------
+ 1.			Form Submission button 
+ 2.			TEXT BLINKING AND TEXT HIGHLIGHT 
+ 3.			Form Submission (contact and admission)
+*/
 
+/*
+----------------------------------------------------------------
+1.           Form Submission button
+----------------------------------------------------------------
+*/
+.submit-button{
+	margin-bottom: 20px;
+	}
+	
+	/*
+	----------------------------------------------------------------
+	2.             TEXT BLINKING AND TEXT HIGHLIGHT
+	----------------------------------------------------------------
+	*/
+	
+	
+	.blinking{
+		animation:blinkingText 0.8s 2;
+	}
+	@keyframes blinkingText{
+		0%{     color: #000;    }
+	   
+		50%{    color: red; }
+		99%{    color:transparent;  }
+		100%{   color: #000;    }
+	}
+	.highlight {
+		background-color: #fff2ac;
+		background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+	}
+	
+	/*
+	----------------------------------------------------------------
+	3.            Form Submission (contact and admission)
+	----------------------------------------------------------------
+	*/
+	
+	.gvjc-form{
+		padding: 90px 0px 90px 0px;	
+		background: #069370;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left,  rgb(18, 221, 164), #069370);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left,rgb(18, 221, 164), #069370); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		font-family: 'Poppins', sans-serif;
+		color: #f1f1f1;
+		background-attachment: fixed;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	
+	.gvjc-form input, .gvjc-form textarea{
+		color: #1FA2FF;  
+		font-size: 14px;
+		font-weight: 500;
+		border-radius: 2px;
+		border: 1px solid rgb(206, 192, 192);
+		overflow: hidden;
+		width: 100%;
+		margin: 0px 0px 20px 0px; 
+		padding: 12px 15px 12px 15px;
+		-webkit-transition-duration: .3s;
+		transition-duration: .3s;    	
+	}
+	
+	.gvjc-form input:focus{
+		border-color:  #1FA2FF;  
+	}
+	
+	.gvjc-form textarea{
+		min-height: 150px;
+	}
+	
+	.gvjc-form textarea:focus{
+		border: 1px solid #444fa9;
+	}
+		
 
 
 
@@ -795,7 +864,7 @@ color: white;
 
 /*
 ----------------------------------------------------------------
-3.              Admin panel
+             Admin panel
 ----------------------------------------------------------------
 */
 .admin{
@@ -847,24 +916,3 @@ tr:nth-child(even){
 	background-color: #069370;
 }
 
-/*
-----------------------------------------------------------------
-3.             TEXT BLINKING AND TEXT HIGHLIGHT
-----------------------------------------------------------------
-*/
-
-
-.blinking{
-    animation:blinkingText 0.8s 2;
-}
-@keyframes blinkingText{
-    0%{     color: #000;    }
-   
-    50%{    color: red; }
-    99%{    color:transparent;  }
-    100%{   color: #000;    }
-}
-.highlight {
-    background-color: #fff2ac;
-    background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
-}
