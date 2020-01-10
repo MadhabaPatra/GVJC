@@ -655,15 +655,14 @@ slno          Content
 }
 
 @media only screen and (max-width:768px) {
-	
+	.contact-poster{
+		
+		height: 90vh;
+	}
 	.contact-poster h1{
 	top: 80% ;
 	font-size: 32px;
 	font-weight: bold;
-	}
-	.arrow {
-		height: 2vw;
-		width: 2vw;
 	}
 
 }
@@ -701,14 +700,19 @@ slno          Content
 	border-width: 0px 2px 2px 0px;
 	transform: rotate(45deg);
 	transition: border-width 150ms ease-in-out;
-	
   }
   
   .arrow:hover {
 	border-bottom-width: 4px;
 	border-right-width: 4px;
   }
+  @media only screen and (max-width:608px){
+	.arrow {
+		height: 15px;
+		width: 15px;
+	}
 
+  }
 /*
 ------------------------------------------------------------------------------------------------------------------------------------------
 3.              Contact us Box 
@@ -777,22 +781,31 @@ slno          Content
 }
 .social-media i{
 	font-size: 35px;
-	color:white;
+	color: #525252;
 }
 .social-media i:hover{
-	color: rgb(236, 231, 231);
+	color: #807474;
 }
 .social-media span{
 	letter-spacing: 2px;
 	font-family: Poppins;
 	margin-left: 2px;
 	font-size: 15px;
-	color: white;
+	color: #525252;
 	line-height: 1.9;
 }
 
-
-
+/*
+----------------------------------------------------------------
+5.            Google Map Iframe
+----------------------------------------------------------------
+*/
+#map-frame{
+	border: 2px solid #525252;
+}
+#map-frame:hover{
+	opacity: 0.8;
+}
 
 /*
 ----------------------------------------------------------------
