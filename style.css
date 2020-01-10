@@ -10,6 +10,8 @@ slno          Content
  5.			Resaons Why
  6.			About College And Gallery
  7.			Youtube Video
+ 8.         Quote Section
+ 9.         Job Section
 */
 
 *{
@@ -17,7 +19,8 @@ slno          Content
 }
 body{
 margin: 0px;
-padding: 0px;	
+padding: 0px;
+
 }
 .green-section{
 	background: #A1FFCE;  /* fallback for old browsers */
@@ -102,6 +105,7 @@ nav ul li a.active,nav ul li a:hover{
 	}
 	.logo{
 		font-size: 20px;
+		padding-top: 5px;
 	}
 	.logo-img{
 		height: 45px;
@@ -184,7 +188,7 @@ nav ul li a.active,nav ul li a:hover{
 		position: relative;
 		
 		}
-	
+		
 @media only screen and (max-width:608px) {
 	.slider-section{
 		margin-top: 50px;
@@ -446,6 +450,7 @@ text-align: center;
 */
 .video-section{
 	margin: 10% 15% 10% 15%;
+	
 }
 .video-section h1{
 	font-family: poppins;
@@ -494,6 +499,129 @@ iframe{
 		height: 25vh;
 	}
 }
+/*
+----------------------------------------------------------------
+8.               Quote Section
+----------------------------------------------------------------
+*/
+#quote-section{
+	width: 100%;
+	height: 50vh;
+	margin: 0 0 10% 0;
+	padding: 0;
+	background: url('img/Marble-texture.jpg');
+	text-align: center;
+	font-family: "Barlow" !important;
+}
+.center-div{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: relative;
+	width: 100%;
+	padding: 0 15% 0 15%;
+}
+#quote-section h3{
+	line-height: 36px!important;
+    font-weight: 500;
+	color: #363636;
+	transition: 0.6s;
+	padding: 0 15% 0 15%;
+}
+#quote-section p{
+	margin-top: 5%;
+	font-size: 14px;
+    font-weight: bold !important;
+	color: #069370;
+	transition: 0.6s;
+}
+#quote-section:hover h3{
+	color: #069370;
+}
+#quote-section:hover p{
+	color: #363636;
+}
+/*
+----------------------------------------------------------------
+9.               Admission Section
+----------------------------------------------------------------
+*/
+#con-section{
+	width: 100%;
+	height: 60vh;
+	margin: 100px;
+}
+.apply-img{
+	float: right;
+	width: 60%;
+	height: 100%;
+	background-image:  url('img/For-Better1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/*
+----------------------------------------------------------------
+10.               Job Section
+----------------------------------------------------------------
+*/
+
+#job-section{
+	width: 100%;
+	height: 50vh;
+	background-image:  url('img/Marble-texture.jpg');
+	opacity: 0.9;
+	background-repeat: no-repeat;
+	
+}
+#job-section img{
+	left: 0px;
+	width:40%;
+	height: 50vh;
+}
+.job-div{
+	text-align: right;
+	font-family: "Barlow" !important;
+	width:60%;
+	height: 50vh;
+	padding: 10% 7% 10% 10%;
+	
+	float: right;
+}
+
+.job-div h2{
+	font-weight: bold;
+	font-size: 48px;
+	letter-spacing: 1px;
+}
+.job-div .btn{
+	font-size: 18px;
+	
+	padding: 10px;
+	background-color: #069370; 
+	color: #ffffff;
+	border-radius: 35px;
+}
+#job-section .btn:hover{
+	background-color: #ffffff; 
+	color: #069370;
+}
+@media only screen and (max-width:608px){
+	#job-section h2{
+		font-weight: bold;
+		font-size: 38px;
+		letter-spacing: 1px;
+	}
+	#job-section .btn{
+		font-size: 18px;
+		margin-top: 10px;
+		padding: 10px;
+		background-color: #069370; 
+		color: #ffffff;
+		border-radius: 35px;
+	}
+
+}
+
 /*
 Contact PAGE
 ----------------------------
@@ -737,39 +865,6 @@ border-radius: 25px;
 color: white;
 }
 
-/*
-Job Part
-----------------------------.
-*/
-.job-form{
-	padding: 90px 0px 90px 0px;	
-	background: #069370;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left,  rgb(18, 221, 164), #069370);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left,rgb(18, 221, 164), #069370); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	font-family: 'Poppins', sans-serif;
-	color: #f1f1f1;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-.fileUpload {
-    position: relative;
-    overflow: hidden;
-    margin: 10px;
-}
-.fileUpload input.upload {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-
 
 
 /*
@@ -818,19 +913,39 @@ slno          Content
 	3.            Form Submission (contact and admission)
 	----------------------------------------------------------------
 	*/
-	
+	.alert-white{
+		background: rgba(255,255,255,0.5);
+	}
+	.watermark{
+		color:rgb(158, 152, 152);
+		font-size:180px;
+		bottom: 30%;
+		left: 10%;
+		z-index: 0;
+		position: fixed;
+		transform:rotate(330deg);
+		-webkit-transform:rotate(330deg);
+	}
+	@media only screen and (max-width:608px){
+.watermark{
+	display: none;
+}
+
+	}
 	.gvjc-form{
 		padding: 90px 0px 90px 0px;	
-		background: #069370;  /* fallback for old browsers */
-		background: -webkit-linear-gradient(to left,  rgb(18, 221, 164), #069370);  /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to left,rgb(18, 221, 164), #069370); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		font-family: 'Poppins', sans-serif;
-		color: #f1f1f1;
+		background: url(img/Marble-texture.jpg);
 		background-attachment: fixed;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-	
+	.gvjc-form h2{
+		z-index: 2;
+		font-family: Montserrat;
+		line-height: 150%;
+		letter-spacing: 7px;
+		font-weight: 600;
+	}
 	.gvjc-form input, .gvjc-form textarea{
 		color: #1FA2FF;  
 		font-size: 14px;
@@ -856,7 +971,24 @@ slno          Content
 	.gvjc-form textarea:focus{
 		border: 1px solid #444fa9;
 	}
-		
+
+	.fileUpload {
+		position: relative;
+		overflow: hidden;
+		margin: 10px;
+	}
+	.fileUpload input.upload {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		cursor: pointer;
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+			
 
 
 

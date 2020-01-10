@@ -85,39 +85,21 @@ $(document).ready(function(){
 
 
 
-<div class="job-form">
-	
+<div class="gvjc-form">
+		
 	
 <div class="container">
 		<div class="section-heading center-holder">
-				<h2 class="text-center"> Fill Form Very Carefully</h2>
+				<h2 class="text-center">Application Form</h2>
 			
-	<div class="alert alert-warning notice">
+	<div class="alert alert-white">
 			<strong><marquee>here is notice for those who are applying job as teaching or manangement staff,please kindly upload your resume otherwise your application may not considered.....</marquee> </strong>
 			</div>
 		</div>	
-	  <!-- thank you message or alert message -->
-	<div class="text-center"><strong><span class="text-danger blinking">
-		    <?php
-		    echo $msg;
-		    ?></span></strong>
-		    </div>
-		    <div class="text-center"> <strong><span class="text-success blinking">
-		        <?php
-		        echo $successmsg;
-		        ?>
-		         </span>
-		        <span class="highlight">
-		             <?php
-		            echo $genId;
-		             ?>
-		        </span>
-		      </strong> 
-		          </div>
-		      
+	      
 		<div>
 			<form  method="post" class="contact-form" enctype="multipart/form-data">
-				<div class="alert alert-success">
+				
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<input type="text" name="name" placeholder="Your Full-Name">
@@ -148,31 +130,37 @@ $(document).ready(function(){
 				<input type="number" maxlength="2" name="age" placeholder="Your Age" oninput="javascript: if (this.value.length > this.maxLength)this.value=this.value.slice(0,this.maxLength);">
 					</div>
 					</div>	
-				</div>
+				
 					<div class="section-heading center-holder">
 
 									<h2 class="text-center">Qualification Details</h2>
 							
 	
 		</div>	
-		<div class="alert alert-success">
-		<div class="row">
-					 <div class="col-xs-12"> <center>
-							<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+		<center>
+		<div class="col-md-6 col-xs-6">
+				<input id="uploadFile" placeholder="No File Choosen" disabled="disabled" />
+		</div>
+	</center>
+		<div class="col-md-6 col-xs-6"> 		
 <div class="fileUpload btn btn-primary">
-    <span>Upload Your Resume</span>
-    <input id="uploadBtn" type="file" class="upload" onchange="udata()"/>
-</div></center>
-					</div>
+<span id="file-txt">Upload Your Resume</span>
+<input id="uploadBtn" type="file" class="upload" onchange="udata()"/>
+</div>
+
+		</div>
+	
+		<div class="row">
+					 
                        <div class="col-xs-12">
 				<input type="text" name="sal" placeholder="Salary Expected">
 					</div>
 					</div>	
 					<center>
 					 <div class="col-xs-12">
-					<button type="submit" name="send" class="submit-button btn btn-outline-success" onclick="show()">SUBMIT</button>
+					<button type="submit" name="send" class="submit-button btn btn-success" onclick="show()">SUBMIT</button>
 					</div></center>
-				</div>
+		
 															
 			</form>	
 		</div>

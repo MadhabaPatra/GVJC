@@ -14,6 +14,8 @@ $(document).ready(function(){
 function udata(){
     var a=document.getElementById("uploadBtn").value;
     document.getElementById("uploadFile").value = a;
+    document.getElementById("file-txt").innerHTML="Modify Document";
+   
 }
 /*
 _____________Page Reload Resubmission Issue Solve_______________
@@ -32,3 +34,9 @@ function markCalc(i) {
     r=p+"%";
     x.value= r;
   }
+/*
+_____________ Carousel Time Interval______________
+*/
+  $('.carousel').carousel({
+    interval: 10
+  })
