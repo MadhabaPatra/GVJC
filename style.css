@@ -1021,7 +1021,7 @@ font-size: 18px;
 		width: 100%;
 		height: 65vh;
 		z-index: 0;
-		background: url('img/notebook.png');
+		background: url('../img/notebook.png');
 		background-repeat: no-repeat;
 	}
 	#layer-section img{
