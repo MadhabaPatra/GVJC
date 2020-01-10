@@ -45,20 +45,7 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
    <link rel="stylesheet" type="text/css" href="../style.css" />
   
-	<script type="text/javascript">
-$(document).ready(function(){
-    $("select.country").change(function(){
-        var selectedCountry = $(".country option:selected").val();
-        $.ajax({
-            type: "POST",
-            url: "job-panel1.php",
-            data: { country : selectedCountry } 
-        }).done(function(data){
-            $("#response").html(data);
-        });
-    });
-});
-</script>
+	
 </head>	
 <!--
 	 ________________________________Body Part_______________________________________________
@@ -86,16 +73,33 @@ $(document).ready(function(){
 
 
 <div class="gvjc-form">
-		
+		<section id="layer-section">
+				
+				<div class="col-md-4 col-xs-4">
+						<h2 class="watermark text-center">Job</h2>
+				<img src="../img/pen-left.png" alt="" class="pen-2">
+				
+				</div>
+				<div class="col-md-4 col-xs-4">
+					<img src="../img/pen-right.png" alt="" class="pen-2">
+					<h2 class="application-heading text-center"> Application Form</h2>	
+					<span class="application-border ">-------------------------------------------</span>
+				</div>
+				<div class="col-md-4 col-xs-4">
+					<img src="../img/pen-left.png" alt="" class="pen-3">
+				</div>
+				
+					</section>	
+					
+			
 	
 <div class="container">
-		<div class="section-heading center-holder">
-				<h2 class="text-center">Application Form</h2>
+		
 			
 	<div class="alert alert-white">
-			<strong><marquee>here is notice for those who are applying job as teaching or manangement staff,please kindly upload your resume otherwise your application may not considered.....</marquee> </strong>
+			<strong><marquee>Notice For Those who is applying job as teacher upload your resume.</marquee> </strong>
 			</div>
-		</div>	
+		
 	      
 		<div>
 			<form  method="post" class="contact-form" enctype="multipart/form-data">
@@ -115,17 +119,16 @@ $(document).ready(function(){
 				<label>Employee Type:</label>
                 <select name="emp_type" class="country">
                     <option value="" hidden="hidden">Select</option>
-                    <option value="teaching">Teaching</option>
-                    <option value="nonteaching">Non Teaching</option>
-                    <option value="management">Management</option>
+					<option value="teaching">Math Teacher</option>
+					<option value="teaching">English Teacher</option>
+					<option value="teaching">IT Teacher</option>
+					<option value="teaching">Biology Teacher</option>
+					<option value="teaching">Physics Teacher</option>
+					<option value="teaching">Chemistry Teacher</option>
+					<option value="teaching">Management Staff</option>
                 </select>
                </div>
-					 <div class="col-xs-12">
-					 	<label>Employee Position:</label>
-                <select name="emp" id="response">
-                	<option hidden="hidden">Select</option>
-                </select>
-					</div>
+					
 					 <div class="col-xs-12">
 				<input type="number" maxlength="2" name="age" placeholder="Your Age" oninput="javascript: if (this.value.length > this.maxLength)this.value=this.value.slice(0,this.maxLength);">
 					</div>

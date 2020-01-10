@@ -22,10 +22,8 @@ margin: 0px;
 padding: 0px;
 
 }
-.green-section{
-	background: #A1FFCE;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.default-section{
+	background: url('img/Marble-texture.jpg');
 	
 }
 /*
@@ -189,7 +187,7 @@ nav ul li a.active,nav ul li a:hover{
 		
 		}
 		
-@media only screen and (max-width:608px) {
+@media only screen and (max-width:768px) {
 	.slider-section{
 		margin-top: 50px;
 	width: 100%;
@@ -217,7 +215,7 @@ nav ul li a.active,nav ul li a:hover{
 */
 .link-box{
     width: 100%;
-	padding: 10px 15% 10px 15%;
+	padding: 0px 15% 10px 15%;
 }
 .details-box{
 	padding: 30px;
@@ -355,7 +353,7 @@ transform: translate(-50%);
 	position: fixed;
 	display: none;
  }
- @media only screen and (max-width:608px){
+ @media only screen and (max-width:768px){
 	.carousel i{
 		display: block;
 	}
@@ -486,7 +484,7 @@ iframe{
 	height: 40vh;
 	
 }
-@media only screen and (max-width:608px){
+@media only screen and (max-width:768px){
 	.video-section{
 		margin: 10% 5% 10% 5%;
 	}
@@ -548,17 +546,11 @@ iframe{
 */
 #con-section{
 	width: 100%;
-	height: 60vh;
-	margin: 100px;
+	height: 40vh;
+	
+	
 }
-.apply-img{
-	float: right;
-	width: 60%;
-	height: 100%;
-	background-image:  url('img/For-Better1.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-}
+
 /*
 ----------------------------------------------------------------
 10.               Job Section
@@ -566,12 +558,13 @@ iframe{
 */
 
 #job-section{
+	margin: 0px;
+	padding: 0px;
 	width: 100%;
 	height: 50vh;
 	background-image:  url('img/Marble-texture.jpg');
 	opacity: 0.9;
 	background-repeat: no-repeat;
-	
 }
 #job-section img{
 	left: 0px;
@@ -580,11 +573,10 @@ iframe{
 }
 .job-div{
 	text-align: right;
-	font-family: "Barlow" !important;
+	font-family: Poppins !important;
 	width:60%;
 	height: 50vh;
 	padding: 10% 7% 10% 10%;
-	
 	float: right;
 }
 
@@ -595,26 +587,32 @@ iframe{
 }
 .job-div .btn{
 	font-size: 18px;
-	
 	padding: 10px;
 	background-color: #069370; 
 	color: #ffffff;
 	border-radius: 35px;
 }
 #job-section .btn:hover{
-	background-color: #ffffff; 
-	color: #069370;
+	background-color:#262626; 
+	color: #f3e51c;
 }
-@media only screen and (max-width:608px){
-	#job-section h2{
+@media only screen and (max-width:768px){
+	#job-section img{
+		left: 0px;
+		width:60%;
+	}
+	.job-div {
+		width:40%;
+	}
+	.job-div h2{
 		font-weight: bold;
-		font-size: 38px;
+		font-size: 28px;
 		letter-spacing: 1px;
 	}
-	#job-section .btn{
-		font-size: 18px;
+	.job-div .btn{
+		font-size: 16px;
 		margin-top: 10px;
-		padding: 10px;
+		padding: 7px;
 		background-color: #069370; 
 		color: #ffffff;
 		border-radius: 35px;
@@ -917,34 +915,39 @@ slno          Content
 		background: rgba(255,255,255,0.5);
 	}
 	.watermark{
+		font-family: Montserrat;
 		color:rgb(158, 152, 152);
-		font-size:180px;
+		font-size:160px;
 		bottom: 30%;
-		left: 10%;
+		left: 20%;
 		z-index: 0;
-		position: fixed;
-		transform:rotate(330deg);
-		-webkit-transform:rotate(330deg);
+		transform:rotate(350deg);
+		-webkit-transform:rotate(350deg);
 	}
 	@media only screen and (max-width:608px){
 .watermark{
-	display: none;
+	font-size:100px;
 }
-
 	}
 	.gvjc-form{
-		padding: 90px 0px 90px 0px;	
+		padding: 90px 0px 0px 0px;	
 		background: url(img/Marble-texture.jpg);
 		background-attachment: fixed;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-	.gvjc-form h2{
-		z-index: 2;
+	 .application-heading{
+		top: 0px;
+		z-index: 1;
 		font-family: Montserrat;
 		line-height: 150%;
 		letter-spacing: 7px;
 		font-weight: 600;
+		position: relative;
+	}
+	.application-border{
+letter-spacing: 5px;
+font-size: 18px;
 	}
 	.gvjc-form input, .gvjc-form textarea{
 		color: #1FA2FF;  
@@ -988,10 +991,69 @@ slno          Content
 		opacity: 0;
 		filter: alpha(opacity=0);
 	}
+	@media only screen and (max-width:768px){
+		.alert-white{
+			position: absolute;
+		}
+		
+		.application-heading{
+			top: -190px;
+			font-size: 22px;
+			letter-spacing: 5px;
+		}
+		.application-border{
+		display: none;
+		}
+		.gvjc-form form{
 			
-
-
-
+			position: relative;
+		}
+	}	
+			
+/*
+----------------------------------------------------------------
+4.               Layer Section
+----------------------------------------------------------------
+*/
+#layer-section{
+		position: relative;
+		padding: -10px;
+		width: 100%;
+		height: 65vh;
+		z-index: 0;
+		background: url('img/notebook.png');
+		background-repeat: no-repeat;
+	}
+	#layer-section img{
+		transition: 1s;
+	}
+	#layer-section .pen-1:hover{
+		padding: 33px;
+	-webkit-transform: rotate(-8deg);
+		transform: rotate(-8deg);
+	transition: 1s;
+	}
+	#layer-section .pen-2:hover{
+	-webkit-transform: rotate(-28deg);
+		transform: rotate(-28deg);
+	transition: 1s;
+	}
+	#layer-section .pen-3:hover{
+		padding: 33px;
+	-webkit-transform: rotate(-18deg);
+		transform: rotate(-18deg);
+	transition: 1s;
+	}
+	@media only screen and (max-width:768px){
+		#layer-section{
+			top: -40px;
+			height: 40vh;
+		}
+		#layer-section .pen-3{
+			display: none;
+		}
+		
+	}	
 
 
 /*
