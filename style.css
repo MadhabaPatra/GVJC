@@ -931,7 +931,7 @@ slno          Content
 	}
 	.gvjc-form{
 		padding: 90px 0px 0px 0px;	
-		background: url(img/Marble-texture.jpg);
+		background: url('../img/Marble-texture.jpg');
 		background-attachment: fixed;
 		background-size: cover;
 		background-repeat: no-repeat;
