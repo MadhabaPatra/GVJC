@@ -102,7 +102,7 @@ nav ul li a.active,nav ul li a:hover{
         left:0px;
 	}
 	.logo{
-		font-size: 20px;
+		font-size: 19px;
 		padding-top: 5px;
 	}
 	.logo-img{
@@ -114,7 +114,7 @@ nav ul li a.active,nav ul li a:hover{
 	float: right;
 	width: 40px;
 	height: 40px;
-    margin:10px;
+        margin:10px 5px 10px 5px;
 	cursor: pointer;
 	text-align: center;
 	font-size: 30px;
