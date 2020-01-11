@@ -189,7 +189,6 @@ nav ul li a.active,nav ul li a:hover{
 		
 @media only screen and (max-width:768px) {
 	.slider-section{
-		margin-top: 50px;
 	width: 100%;
 	height: 100%;
 	}
