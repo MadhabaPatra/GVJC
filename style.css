@@ -15,7 +15,8 @@ slno          Content
 */
 
 *{
-	scroll-behavior: smooth;	
+	scroll-behavior: smooth;
+	text-decoration: none;	
 }
 body{
 margin: 0px;
@@ -1066,8 +1067,120 @@ font-size: 18px;
 		}
 		
 	}	
+/*
+----------------------------------------------------------------
+5.              Square Section
+----------------------------------------------------------------
+*/
+.square-bg{
+	background-image: url('img/square-pattern.jpg');
+}
+/*
+----------------------------------------------------------------
+             Gallery
+----------------------------------------------------------------
+*/
+.heading-breadcrumb {
+    text-align: center;
+    background-size: acover;
+	height: 40vh;
+	padding:10%;
+	margin: 0px;
+	
+}
+.gallery-cover{
+	background-image: url(img/blog-bc-bg.png);
+}
+.heading-breadcrumb h2 {
+    font-size: 40px;
+	color: #fff;
+	font-weight: 600;
+    font-family: 'Montserrat';
+}
+.bread-crumb-line, .bread-crumb-line a{
+    font-size: 19px !important;
+	color: #fff !important;
+	font-weight: 400 !important;
+	line-height: 1.5 !important;
+	text-decoration: none;
+}
+.breadcrumb-below{
+	margin-top: -15px;
+	padding: 0px;
+	height: 5vh;
+	background-image: url(img/menu-bg-blue.png);
+	transform: rotate(-180deg);
+	background-repeat: repeat-x;
+}
+.gallery-heading{
+	width: 100%;
+	height: 10vh;
+	text-align: center;
+	margin: 10px 0px 30px 0px;
+}
+.box-heading{
+	font-size: 32px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	font-family: 'Montserrat';
+	color: #EE4634;
+}
+.enroll-section{
+	background-image: url('img/news-letter-bg-2.jpg');
+	width: 100%;
+	height: 60vh;
+	text-align: center;
+}
+.enroll-section img{
+	margin-top: -40px;
+	left: 50%;
+	
+}
+.enroll-section h1{
+	color: #fff;
+	font-weight: bold;
+	line-height: 1.2;
+	font-size: 28px;
+	font-family: 'Montserrat';
+	padding: 10px 27% 10px 27%;
+}
+.enroll-button{
+	font-size: 18px;
+    color: #fff;
+	background-color:	#5DBCD2!important;
+    padding: 9px 20px;
+    display: inline-block;
+    border-radius: 5px;
+	font-family: 'Montserrat';
+}
+.enroll-button:hover{
+	text-decoration: none;
+	color: rgb(241, 236, 236);
+}
+
+.better-section{
+	text-align: right;
+	
+}
 
 
+.tringle{
+	margin-top: 10%;
+	background-image: url('img/footer-two-bg.png');
+	height: 10vh;
+	background-repeat: repeat-x;
+}
+@media  only screen and (max-width:768px){
+	.heading-breadcrumb{
+		height: 30vh;
+		padding: 15%;
+	}
+
+	.enroll-section h1{
+		font-size: 21px;
+	padding: 10px 17% 10px 17%;
+	}
+}
 /*
 ----------------------------------------------------------------
              Admin panel
